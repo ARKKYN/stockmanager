@@ -9,7 +9,7 @@ const app = next({dev});
 const port = parseInt(process.env.APP_PORT);
 const handle = app.getRequestHandler();
 
-seedDatabase();
+//seedDatabase();
 
 app.prepare().then(() => {
 	const server = express();

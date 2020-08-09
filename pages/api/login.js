@@ -1,6 +1,6 @@
-import {JWT_KEY, JWT_EXPIRY} from 'server/config/config';
-import jwt from 'jsonwebtoken';
-import {v4 as uuidv4} from 'uuid';
+import { JWT_EXPIRY} from 'server/config/config';
+
+import { generateJwt, refreshToken } from 'server/utils/auth/jwt';
 
 export default async function loginHandler(req, res) {
 	if (req.method != 'POST') {
@@ -13,14 +13,10 @@ export default async function loginHandler(req, res) {
 		return res.status(401).json({});
 	}
 
-	const token = jwt.sign({email: result.email, id: uuidv4()}, JWT_KEY, {
-		algorithm: 'HS256',
-		expiresIn: JWT_EXPIRY, // seconds
-	});
+	const token = generateJwt(result);
 
-	const secure = process.env.NODE_ENV == 'production';
 	const cookieExpiry = JWT_EXPIRY * 1000;
-	res.cookie('client', `${token}`, {maxAge: JWT_EXPIRY * 1000, secure: secure});
+	res.cookie('client', `${token}`, {maxAge: cookieExpiry});
 
 	return res.status(200).json({});
 }

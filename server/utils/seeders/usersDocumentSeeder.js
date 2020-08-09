@@ -7,10 +7,11 @@
  async function seedUsers(models) {
 	const totalUsers = await models.users.countDocuments({});
 
-	if (!totalUsers){
-		await models.users.insertMany(data);
+	if (totalUsers){
+	  return;
 	}
-	
+
+	await models.users.insertMany(data);
 	return;
 }
 

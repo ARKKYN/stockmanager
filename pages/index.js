@@ -3,9 +3,11 @@ import {useSnackbar} from 'react-simple-snackbar';
 import Head from 'components/head';
 import LoginForm from 'components/loginForm';
 import StockList from 'components/stockList';
-import loginApi from 'ajaxClient/authApis';
+import {loginApi, refreshAuthApi} from 'ajaxClient/authApis';
 import getStocksApi from 'ajaxClient/getStocksApi';
 import parseCookies from 'helpers/parseCookies';
+
+import {w3cwebsocket as W3CWebSocket} from 'websocket';
 
 export default function indexPage() {
 	const [loggedIN, setLoggedIN] = useState(false);
@@ -23,7 +25,9 @@ export default function indexPage() {
 			}
 			return;
 		}
-		setLoggedIN(false);
+		if (loggedIN) {
+			setLoggedIN(false);
+		}
 		return;
 	};
 
@@ -47,6 +51,22 @@ export default function indexPage() {
 		}
 	};
 
+	const refreshToken = async () => {
+		try {
+			const result = await refreshAuthApi();
+
+			if (result.status == '401') {
+				openSnackbar('Session Expired');
+				return;
+			}
+
+			toggleUI();
+			return;
+		} catch (e) {
+			openSnackbar('Unable to communicate with the server');
+		}
+	};
+
 	const getStocks = async () => {
 		try {
 			const result = await getStocksApi();
@@ -56,15 +76,53 @@ export default function indexPage() {
 				return;
 			}
 			const data = await result.json();
-			setStocks(data);
+			setStocks(data.stocks);
 		} catch (e) {
 			openSnackbar('Unable to communicate with the server');
 		}
 	};
 
+	const updateStocks = (message) => {
+		const data = JSON.parse(message.data);
+
+		if (!stocks) {
+			return;
+		}
+
+		const temp = stocks.map((x) => {
+			if (x._id == data.id) {
+				return {...x, price: data.price, _id: data.id};
+			}
+			return x;
+		});
+		setStocks(temp);
+	};
+ 
+	const connectWS = () => {
+		const client = new W3CWebSocket(
+			`ws://${window.location.hostname}:5000/wssocket`
+		);
+
+		client.onopen = () => {
+			console.log('WebSocket Client Connected');
+		};
+		client.onmessage = updateStocks;
+	};
+
 	useEffect(() => {
-		getStocks();
-	}, [loggedIN]);
+		var autoRefresh;
+		if (loggedIN) {
+			connectWS();
+			getStocks();
+			autoRefresh = setInterval(() => {
+				refreshToken();
+			}, 250000);
+			return;
+		}
+		if (autoRefresh) {
+			clearInterval(autoRefresh);
+		}
+	}, [loggedIN, connectWS, getStocks, refreshToken]);
 
 	return (
 		<>

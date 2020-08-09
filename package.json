@@ -1,0 +1,29 @@
+{
+  "name": "create-next-app-cli",
+  "version": "0.1.0",
+  "description": "",
+  "main": "server/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon --exec babel-node server/server.js",
+    "build": "next build",
+    "prod": "NODE_ENV=production nodemon --exec babel-node server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/node": "^7.10.5",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.28",
+    "next": "^9.5.1",
+    "nodemon": "^2.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-simple-snackbar": "^1.1.10",
+    "skeleton-css": "^2.0.4"
+  }
+}

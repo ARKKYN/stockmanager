@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   poweredByHeader: false,
   webpack: (config) => {
     config.node = {

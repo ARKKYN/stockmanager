@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "description": "",
   "main": "server/server.js",
-  "type": "module",
   "scripts": {
     "dev": "NODE_ENV=development nodemon --exec babel-node server/server.js",
     "build": "next build",

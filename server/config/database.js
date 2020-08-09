@@ -1,5 +1,5 @@
-import StocksSchema from "models/stocks";
-import UserSchema from "models/user";
+import StocksSchema from "server/models/stocks";
+import UserSchema from "server/models/user";
 import mongoose from "mongoose";
 
 async function connectDB() {

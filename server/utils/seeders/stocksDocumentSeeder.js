@@ -1,5 +1,4 @@
-import DB from 'models';
-import randomNumberBetween from 'utils/randomNumberBetween';
+import randomNumberBetween from 'server/utils/randomNumberBetween';
 
 export const data = [
 	{short_code: 'ril', name: 'reliance', price: randomNumberBetween(1500, 1600) },

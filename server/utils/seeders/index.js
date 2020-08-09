@@ -1,4 +1,4 @@
-import connectDB from "config/database";
+import connectDB from "server/config/database";
 import seedUsers from "./usersDocumentSeeder";
 import seedStocks from "./stocksDocumentSeeder";
 

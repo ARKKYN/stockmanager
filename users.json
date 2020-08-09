@@ -1,0 +1,43 @@
+[
+	{
+		"_id": {
+			"$oid": "5f304b4b1acaf4939ab629b3"
+		},
+		"stocks": [
+			"5f304af44cdee793167b08e7",
+			"5f304af44cdee793167b08e8",
+			"5f304af44cdee793167b08e9",
+			"5f304af44cdee793167b08ea"
+		],
+		"name": "test",
+		"email": "test@test.com",
+		"__v": 0,
+		"createdAt": {
+			"$date": "2020-08-09T19:15:23.375Z"
+		},
+		"updatedAt": {
+			"$date": "2020-08-09T19:15:23.375Z"
+		}
+	},
+	{
+		"_id": {
+			"$oid": "5f304b4b1acaf4939ab629b4"
+		},
+		"stocks": [
+			"5f304af44cdee793167b08ea",
+			"5f304af44cdee793167b08eb",
+			"5f304af44cdee793167b08ec",
+			"5f304af44cdee793167b08ed",
+			"5f304af44cdee793167b08ee"
+		],
+		"name": "fake",
+		"email": "fake@fake.com",
+		"__v": 0,
+		"createdAt": {
+			"$date": "2020-08-09T19:15:23.375Z"
+		},
+		"updatedAt": {
+			"$date": "2020-08-09T19:15:23.375Z"
+		}
+	}
+]

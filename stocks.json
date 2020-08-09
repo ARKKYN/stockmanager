@@ -1,0 +1,121 @@
+[{
+  "_id": {
+    "$oid": "5f304af44cdee793167b08e7"
+  },
+  "users": ["5f304b4b1acaf4939ab629b3"],
+  "short_code": "ril",
+  "name": "reliance",
+  "price": 1598,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-08-09T19:13:56.515Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-09T19:13:56.515Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f304af44cdee793167b08e8"
+  },
+  "users": ["5f304b4b1acaf4939ab629b3"],
+  "short_code": "ntl",
+  "name": "Nestle",
+  "price": 227,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-08-09T19:13:56.516Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-09T19:13:56.516Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f304af44cdee793167b08e9"
+  },
+  "users": ["5f304b4b1acaf4939ab629b3"],
+  "short_code": "hal",
+  "name": "Hindustan Aeronautocs",
+  "price": 2350,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-08-09T19:13:56.516Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-09T19:13:56.516Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f304af44cdee793167b08ea"
+  },
+  "users": ["5f304b4b1acaf4939ab629b3", "5f304b4b1acaf4939ab629b4"],
+  "short_code": "sbi",
+  "name": "State bank",
+  "price": 372,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-08-09T19:13:56.516Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-09T19:13:56.516Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f304af44cdee793167b08eb"
+  },
+  "users": ["5f304b4b1acaf4939ab629b4"],
+  "short_code": "ioc",
+  "name": "Indian Oil Corp",
+  "price": 174,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-08-09T19:13:56.516Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-09T19:13:56.516Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f304af44cdee793167b08ec"
+  },
+  "users": ["5f304b4b1acaf4939ab629b4"],
+  "short_code": "xyz",
+  "name": "xyz infra structure",
+  "price": 3553,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-08-09T19:13:56.516Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-09T19:13:56.516Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f304af44cdee793167b08ed"
+  },
+  "users": ["5f304b4b1acaf4939ab629b4"],
+  "short_code": "irctc",
+  "name": "Indian Railway",
+  "price": 1490,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-08-09T19:13:56.516Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-09T19:13:56.516Z"
+  }
+},{
+  "_id": {
+    "$oid": "5f304af44cdee793167b08ee"
+  },
+  "users": ["5f304b4b1acaf4939ab629b4"],
+  "short_code": "goog",
+  "name": "google",
+  "price": 210181,
+  "__v": 0,
+  "createdAt": {
+    "$date": "2020-08-09T19:13:56.517Z"
+  },
+  "updatedAt": {
+    "$date": "2020-08-09T19:13:56.517Z"
+  }
+}]

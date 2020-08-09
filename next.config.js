@@ -1,4 +1,4 @@
-export default {
+module.exports = {
   
   webpack: (config) => {
     config.node = {

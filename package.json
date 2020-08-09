@@ -1,5 +1,5 @@
 {
-  "name": "create-next-app-cli",
+  "name": "stock-manager",
   "version": "0.1.0",
   "description": "",
   "main": "server/server.js",
@@ -8,6 +8,9 @@
     "dev": "NODE_ENV=development nodemon --exec babel-node server/server.js",
     "build": "next build",
     "prod": "NODE_ENV=production nodemon --exec babel-node server/server.js"
+  },
+  "engines": {
+    "node": "12.x"
   },
   "keywords": [],
   "author": "",

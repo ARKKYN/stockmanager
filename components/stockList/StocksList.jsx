@@ -10,6 +10,7 @@ export default function StocksList({stocks}) {
 					return <div className=" six" key={uuid()}>
                     <h5>{x.name}</h5>
 					<h6>{x.short_code}</h6>
+					
 					<p>INR: {x.price}</p>
 				</div>;})
 				}

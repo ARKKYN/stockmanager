@@ -3,4 +3,8 @@
 
   this app is bootstraped with `next.js`
 
-  this apps ui is hosted in https://stmgr.devmakk.com/ . for full demo view it in local
+
+  this apps ui is hosted in https://stmgr.devmakk.com/ . for full demo view it in local.
+
+  ### Demo users
+   `test@test.com `and `fake@fake.com`

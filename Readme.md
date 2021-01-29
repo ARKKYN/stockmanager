@@ -7,4 +7,4 @@
   this apps ui is hosted in https://stmgr.devmakk.com/ . for full demo view it in local.
 
   ### Demo users
-   `test@test.com `and `fake@fake.com`
+   `test@test.com `and `fake@fake.com`  
